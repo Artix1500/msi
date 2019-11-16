@@ -7,11 +7,72 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MathNet.Numerics.Interpolation;
+using MathNet.Numerics.LinearAlgebra;
+using MathNet.Numerics.LinearAlgebra.Complex;
 
 namespace KNN
 {
     public partial class Form1 : Form
     {
+        private const int NOfAttributes = 9;
+        private readonly double[][] _data = {
+                    new[] {1, 0.4, 0.2, 0.2, 0.2, 0, 0, 0, 0, 0},
+                    new[] {1, 0.4, 0, 0, 0, 0.4, 0.4, 0.4, 0, 0},
+                    new[]{1, 0.4, 0, 0, 0, 0.4, 0.4, 0, 0, 0},
+                    new[]{1, 0, 0, 0, 0.4, 0, 0, 0.4, 0.4, 0},
+                    new[]{2, 0.4, 0.4, 0, 0, 0, 0.4, 0, 0, 0},
+                    new[]{2, 0.6, 0, 0, 0, 0, 0.6, 0.6, 0, 0},
+                    new[]{2, 0.4, 0, 0, 0, 0.2, 0, 0, 0, 0},
+                    new[]{2, 0.8, 0.4, 0, 0, 0.4, 0.4, 0, 0.6, 0},
+                    new[]{2, 0.6, 0, 0, 0, 0.6, 0.6, 0, 0.6, 0.6},
+                    new[]{2, 0.6, 0, 0, 0.6, 0, 0, 0.6, 0, 0},
+                    new[]{2, 0.6, 0.4, 0.8, 0, 0.8, 0.8, 0, 0, 0},
+                    new[]{2, 0.6, 0, 0, 0, 0.4, 0.4, 0, 0, 0},
+                    new[]{2, 0.4, 0, 0, 0, 0.8, 0.8, 0, 0, 0},
+                    new[]{2, 0.4, 0.6, 0, 0, 0.4, 0.4, 0, 0.4, 0},
+                    new[]{2, 0.6, 0, 0, 0, 0.8, 0.8, 0, 0.4, 0},
+                    new[]{2, 0.4, 0, 0, 0, 0.2, 0.2, 0.4, 0, 0},
+                    new[]{2, 0.4, 0, 0.2, 0, 0.4, 0.4, 0.2, 0.2, 0},
+                    new[]{2, 0.4, 0.4, 0.2, 0.2, 0, 0, 0, 0, 0},
+                    new[]{2, 0.6, 0.6, 0, 0, 0, 0, 0, 0, 0},
+                    new[]{2, 0.4, 0.4, 0, 0, 0.4, 0.4, 0, 0, 0},
+                    new[]{2, 0.4, 0, 0, 0, 0.4, 0.4, 0, 0.4, 0},
+                    new[]{2, 0.8, 0.6, 0.2, 0, 0.8, 0.8, 0.6, 0, 0},
+                    new[]{2, 0, 0, 0, 0, 0.8, 0.8, 0, 0, 0},
+                    new[]{2, 0, 0, 0, 0, 0, 0, 0.4, 0.6, 0.6},
+                    new[]{3, 0.6, 0, 0, 0.4, 0, 0, 0.6, 0, 0},
+                    new[]{3, 0.8, 0.6, 0, 0.8, 0.8, 0.8, 0.6, 0, 0},
+                    new[]{3, 0.6, 0, 0, 0, 0.6, 0.6, 0, 0.6, 0},
+                    new[]{3, 0.6, 0.6, 0.2, 0, 0.6, 0.6, 0, 0.2, 0},
+                    new[]{3, 0.8, 0, 0, 0, 0, 0, 0, 0.6, 0},
+                    new[]{3, 1, 0, 0, 0, 1, 1, 0.2, 1, 0.6},
+                    new[]{3, 0.6, 0, 0, 0, 1, 1, 0, 0.8, 0},
+                    new[]{3, 0, 0.6, 0, 0, 0.8, 0.8, 0.8, 0, 0},
+                    new[]{3, 0.8, 0.6, 0, 0, 0.8, 0.8, 0.4, 0.4, 0},
+                    new[]{3, 0.8, 0.6, 0, 0, 0.8, 0.8, 0.4, 0.4, 0},
+                    new[]{3, 0.8, 0, 0, 0, 0.4, 0.4, 0, 0.6, 0.4},
+                    new[]{3, 0.8, 0, 0, 0, 0.8, 0.8, 0.2, 0, 0},
+                    new[]{3, 0.6, 0.6, 0.4, 0, 0.6, 0.6, 0, 0.6, 0},
+                    new[]{3, 0.8, 0.8, 0, 0.2, 0.4, 0, 0.6, 0, 0},
+                    new[]{4, 0.8, 0, 0, 0, 0, 0.6, 0, 0.8, 0.4},
+                    new[]{4, 0.6, 0, 0, 0.4, 0, 0, 0.6, 0, 0},
+                    new[]{4, 0.8, 0, 0, 0, 0, 0, 0, 0.8, 0.6},
+                    new[]{4, 0.8, 0, 0, 0, 0.8, 0.8, 0, 0.6, 0.6},
+                    new[]{4, 0.6, 0.4, 0.4, 0, 0.6, 0.6, 0.4, 0.4, 0},
+                    new[]{4, 1, 0, 0, 0, 1, 1, 0, 0.8, 0},
+                    new[]{4, 0.6, 0.8, 0, 0, 0.6, 0.6, 0, 0.6, 0.6},
+                    new[]{5, 0.8, 0.8, 0, 0.2, 0, 0, 0, 0.8, 0.8},
+                    new[]{5, 0.8, 0.8, 0, 0.2, 0, 0, 0, 0.8, 0},
+                    new[]{5, 0.8, 0.8, 0, 1, 0, 0, 1, 0, 0},
+                    new[]{5, 0.8, 0, 0, 0, 0, 0, 0, 0.6, 0.6},
+                    new[]{5, 0.8, 0, 0, 0, 1, 1, 0, 1, 0.8}
+                    };
+
+        private readonly Vector<double>[] _trainingDataVectors = new Vector<double>[0];
+
+        private int K => (int)KSelectBox.Value;
+
         public Form1()
         {
             InitializeComponent();
@@ -25,67 +86,15 @@ namespace KNN
             gitScore.Text = "Git 0/10";
             javascriptScore.Text = "JavaScript 0/10";
 
+            var vectorBuilder = Vector<double>.Build;
+            _trainingDataVectors = _data.Select(v => vectorBuilder.Dense(v)).ToArray();
 
-            
+            KSelectBox.Value = 4;
         }
 
-        double[,] data = {
-                    {1, 0.4, 0.2, 0.2, 0.2, 0, 0, 0, 0, 0},
-                    {1, 0.4, 0, 0, 0, 0.4, 0.4, 0.4, 0, 0},
-                    {1, 0.4, 0, 0, 0, 0.4, 0.4, 0, 0, 0},
-                    {1, 0, 0, 0, 0.4, 0, 0, 0.4, 0.4, 0},
-                    {2, 0.4, 0.4, 0, 0, 0, 0.4, 0, 0, 0},
-                    {2, 0.6, 0, 0, 0, 0, 0.6, 0.6, 0, 0},
-                    {2, 0.4, 0, 0, 0, 0.2, 0, 0, 0, 0},
-                    {2, 0.8, 0.4, 0, 0, 0.4, 0.4, 0, 0.6, 0},
-                    {2, 0.6, 0, 0, 0, 0.6, 0.6, 0, 0.6, 0.6},
-                    {2, 0.6, 0, 0, 0.6, 0, 0, 0.6, 0, 0},
-                    {2, 0.6, 0.4, 0.8, 0, 0.8, 0.8, 0, 0, 0},
-                    {2, 0.6, 0, 0, 0, 0.4, 0.4, 0, 0, 0},
-                    {2, 0.4, 0, 0, 0, 0.8, 0.8, 0, 0, 0},
-                    {2, 0.4, 0.6, 0, 0, 0.4, 0.4, 0, 0.4, 0},
-                    {2, 0.6, 0, 0, 0, 0.8, 0.8, 0, 0.4, 0},
-                    {2, 0.4, 0, 0, 0, 0.2, 0.2, 0.4, 0, 0},
-                    {2, 0.4, 0, 0.2, 0, 0.4, 0.4, 0.2, 0.2, 0},
-                    {2, 0.4, 0.4, 0.2, 0.2, 0, 0, 0, 0, 0},
-                    {2, 0.6, 0.6, 0, 0, 0, 0, 0, 0, 0},
-                    {2, 0.4, 0.4, 0, 0, 0.4, 0.4, 0, 0, 0},
-                    {2, 0.4, 0, 0, 0, 0.4, 0.4, 0, 0.4, 0},
-                    {2, 0.8, 0.6, 0.2, 0, 0.8, 0.8, 0.6, 0, 0},
-                    {2, 0, 0, 0, 0, 0.8, 0.8, 0, 0, 0},
-                    {2, 0, 0, 0, 0, 0, 0, 0.4, 0.6, 0.6},
-                    {3, 0.6, 0, 0, 0.4, 0, 0, 0.6, 0, 0},
-                    {3, 0.8, 0.6, 0, 0.8, 0.8, 0.8, 0.6, 0, 0},
-                    {3, 0.6, 0, 0, 0, 0.6, 0.6, 0, 0.6, 0},
-                    {3, 0.6, 0.6, 0.2, 0, 0.6, 0.6, 0, 0.2, 0},
-                    {3, 0.8, 0, 0, 0, 0, 0, 0, 0.6, 0},
-                    {3, 1, 0, 0, 0, 1, 1, 0.2, 1, 0.6},
-                    {3, 0.6, 0, 0, 0, 1, 1, 0, 0.8, 0},
-                    {3, 0, 0.6, 0, 0, 0.8, 0.8, 0.8, 0, 0},
-                    {3, 0.8, 0.6, 0, 0, 0.8, 0.8, 0.4, 0.4, 0},
-                    {3, 0.8, 0.6, 0, 0, 0.8, 0.8, 0.4, 0.4, 0},
-                    {3, 0.8, 0, 0, 0, 0.4, 0.4, 0, 0.6, 0.4},
-                    {3, 0.8, 0, 0, 0, 0.8, 0.8, 0.2, 0, 0},
-                    {3, 0.6, 0.6, 0.4, 0, 0.6, 0.6, 0, 0.6, 0},
-                    {3, 0.8, 0.8, 0, 0.2, 0.4, 0, 0.6, 0, 0},
-                    {4, 0.8, 0, 0, 0, 0, 0.6, 0, 0.8, 0.4},
-                    {4, 0.6, 0, 0, 0.4, 0, 0, 0.6, 0, 0},
-                    {4, 0.8, 0, 0, 0, 0, 0, 0, 0.8, 0.6},
-                    {4, 0.8, 0, 0, 0, 0.8, 0.8, 0, 0.6, 0.6},
-                    {4, 0.6, 0.4, 0.4, 0, 0.6, 0.6, 0.4, 0.4, 0},
-                    {4, 1, 0, 0, 0, 1, 1, 0, 0.8, 0},
-                    {4, 0.6, 0.8, 0, 0, 0.6, 0.6, 0, 0.6, 0.6},
-                    {5, 0.8, 0.8, 0, 0.2, 0, 0, 0, 0.8, 0.8},
-                    {5, 0.8, 0.8, 0, 0.2, 0, 0, 0, 0.8, 0},
-                    {5, 0.8, 0.8, 0, 1, 0, 0, 1, 0, 0},
-                    {5, 0.8, 0, 0, 0, 0, 0, 0, 0.6, 0.6},
-                    {5, 0.8, 0, 0, 0, 1, 1, 0, 1, 0.8}
-                    };
 
         private void trackBarMoved(object sender, EventArgs e)
         {
-
-
             reduxScore.Text = "Redux " + reduxtb.Value + "/10";
             reactScore.Text = "React " + reacttb.Value + "/10";
             angularScore.Text = "Angular " + angulartb.Value + "/10";
@@ -97,73 +106,119 @@ namespace KNN
             javascriptScore.Text = "JavaScript " + javascripttb.Value + "/10";
 
             calculateKNN();
-
-
         }
 
-        private void calculateKNN()
+        private int calculateKNN(Vector<double> objectToClassify = null, bool showResultsInUI = true)
         {
-            float redux = (float)reduxtb.Value / 10;
-            float react = (float)reacttb.Value / 10;
-            float angular = (float)angulartb.Value / 10;
-            float css = (float)csstb.Value / 10;
-            float html = (float)htmltb.Value / 10;
-            float typescript = (float)typescripttb.Value / 10;
-            float vue = (float)vuetb.Value / 10;
-            float git = (float)gittb.Value / 10;
-            float javascript = (float)javascripttb.Value / 10;
-
-            ResultLabel.Text =
-                        redux + " " +
-                        react + " " +
-                        angular + " " +
-                        css + " " +
-                        html + " " +
-                        typescript + " " +
-                        vue + " " +
-                        git + " " +
-                        javascript + " ";
-
-
-
-            /// OBLICZYC !!!!!!!!! ;)
-            /// 
-            double[] currValues = { javascript, git, vue, typescript, html, css, angular, react, redux };
-            List<(int, double)> dist = new List<(int, double)>();
-
-            for(int i = 0; i < data.GetUpperBound(0); i++)
+            if (objectToClassify == null)
             {
-                int classNr = (int)data[i,0];
+                double redux = (double)reduxtb.Value / 10;
+                double react = (double)reacttb.Value / 10;
+                double angular = (double)angulartb.Value / 10;
+                double css = (double)csstb.Value / 10;
+                double html = (double)htmltb.Value / 10;
+                double typescript = (double)typescripttb.Value / 10;
+                double vue = (double)vuetb.Value / 10;
+                double git = (double)gittb.Value / 10;
+                double javascript = (double)javascripttb.Value / 10;
 
-                double distNr = 0;
+                ResultLabel.Text =
+                    redux + " " +
+                    react + " " +
+                    angular + " " +
+                    css + " " +
+                    html + " " +
+                    typescript + " " +
+                    vue + " " +
+                    git + " " +
+                    javascript + " ";
 
-                for(int j = 1; j < data.GetUpperBound(1); j++)
-                {
-                    distNr += (currValues[j - 1] - data[i,j]) * (currValues[j - 1] - data[i,j]);
-                }
-                distNr = Math.Sqrt(distNr);
-                dist.Add((classNr, distNr));
+                objectToClassify = Vector<double>.Build.Dense(new[] { javascript, git, vue, typescript, html, css, angular, react, redux });
+            }
+            
+            var topClasses = _trainingDataVectors
+                .OrderBy(classifiedObject => GetDistance(objectToClassify,classifiedObject.SubVector(1,NOfAttributes))) // orders ascending by distance between classified object and new object
+                .Take(K) //takes K with closest distance
+                .Select(classifiedObject => (int)classifiedObject[0]) //selects the class number
+                .ToList();
 
+            var topClass = topClasses
+                .GroupBy(c => c) //group by class number
+                .OrderByDescending(group => group.Count()) //order by n of occurences of every class
+                .Select(group => group.Key) // select back the class number (which is the key for grouping)
+                .FirstOrDefault(); //take first one IF TWO CLASSES OCCURED WITH THE SAME FREQUENCY ANY OF THEM CAN WIN
+
+            if (showResultsInUI)
+            {
+                ResultLabel.Text = $@"Closest classes: {string.Join(" ", topClasses)}"+
+                                   $@"Assigned class: {topClass} --> {GetSalaryForClass(topClass)}";
+
+                this.Text = $@"Ile jesteś wart -> Precision: {GetPrecisionOnTrainingSet()}";
             }
 
-            dist.Sort((x, y) => x.Item2.CompareTo(y.Item2));
+            return topClass;
+        }
 
+        private double GetDistance(Vector<double> v1, Vector<double> v2)
+        {
+            var diff = v1 - v2;
+            if (EuclideanNormRadioButton.Checked)
+            {
+                return diff.L2Norm();
+            }
+            if (ManhattanNormRadioButton.Checked)
+            {
+                return diff.L1Norm();
+            }
+            if (infinityNormRadioButton.Checked)
+            {
+                return diff.InfinityNorm();
+            }
+            return diff.L2Norm();
+        }
 
-            /// k = 4
-            /// 
-            int nr1 = dist[0].Item1;
-            int nr2 = dist[1].Item1;
-            int nr3 = dist[2].Item1;
-            int nr4 = dist[3].Item1;
-            ResultLabel.Text = "WYNIK " + (nr1).ToString() + " " + (nr2).ToString() + " " + (nr3).ToString() + " " + (nr4).ToString() + " ";
+        private string GetSalaryForClass(int classNumber)
+        {
+            var step = 3000;
+            var upperBound = classNumber * step;
+            return $"{upperBound - step} - {upperBound} zł";
+        }
 
+        private double GetPrecisionOnTrainingSet()
+        {
+            var successfulPredictions = _trainingDataVectors.Count(v =>
+            {
+                var predictedClass = calculateKNN(v.SubVector(1, NOfAttributes),false);
+                var knownClass = (int) v[0];
+                return predictedClass == knownClass;
+            });
 
-
+            return (double)successfulPredictions / _trainingDataVectors.Length;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void EuclideanNormRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            calculateKNN();
+        }
+
+        private void ManhattanNormRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            calculateKNN();
+        }
+
+        private void infinityNormRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            calculateKNN();
+        }
+
+        private void KSelectBox_ValueChanged(object sender, EventArgs e)
+        {
+            calculateKNN();
         }
     }
 }

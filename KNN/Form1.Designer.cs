@@ -30,7 +30,6 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.reduxtb = new System.Windows.Forms.TrackBar();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,6 +57,13 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.javascripttb = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.infinityNormRadioButton = new System.Windows.Forms.RadioButton();
+            this.ManhattanNormRadioButton = new System.Windows.Forms.RadioButton();
+            this.EuclideanNormRadioButton = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.KSelectBox = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.ResultLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -70,6 +76,7 @@
             this.vueScore = new System.Windows.Forms.Label();
             this.gitScore = new System.Windows.Forms.Label();
             this.javascriptScore = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
@@ -90,6 +97,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.gittb)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.javascripttb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.KSelectBox)).BeginInit();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.SuspendLayout();
@@ -115,7 +129,6 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel14, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel13, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel12, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel11, 0, 3);
@@ -125,6 +138,7 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.splitContainer1, 1, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -136,19 +150,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(804, 398);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // tableLayoutPanel14
-            // 
-            this.tableLayoutPanel14.ColumnCount = 2;
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(405, 320);
-            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
-            this.tableLayoutPanel14.RowCount = 1;
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(395, 74);
-            this.tableLayoutPanel14.TabIndex = 9;
             // 
             // tableLayoutPanel13
             // 
@@ -480,6 +481,93 @@
             this.label1.Text = "JavaScript";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(405, 320);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer1.Size = new System.Drawing.Size(395, 74);
+            this.splitContainer1.SplitterDistance = 316;
+            this.splitContainer1.TabIndex = 9;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.infinityNormRadioButton);
+            this.groupBox1.Controls.Add(this.ManhattanNormRadioButton);
+            this.groupBox1.Controls.Add(this.EuclideanNormRadioButton);
+            this.groupBox1.Location = new System.Drawing.Point(6, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(304, 74);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Metric";
+            // 
+            // infinityNormRadioButton
+            // 
+            this.infinityNormRadioButton.AutoSize = true;
+            this.infinityNormRadioButton.Location = new System.Drawing.Point(192, 19);
+            this.infinityNormRadioButton.Name = "infinityNormRadioButton";
+            this.infinityNormRadioButton.Size = new System.Drawing.Size(80, 17);
+            this.infinityNormRadioButton.TabIndex = 2;
+            this.infinityNormRadioButton.Text = "InfinityNorm";
+            this.infinityNormRadioButton.UseVisualStyleBackColor = true;
+            this.infinityNormRadioButton.CheckedChanged += new System.EventHandler(this.infinityNormRadioButton_CheckedChanged);
+            // 
+            // ManhattanNormRadioButton
+            // 
+            this.ManhattanNormRadioButton.AutoSize = true;
+            this.ManhattanNormRadioButton.Location = new System.Drawing.Point(101, 19);
+            this.ManhattanNormRadioButton.Name = "ManhattanNormRadioButton";
+            this.ManhattanNormRadioButton.Size = new System.Drawing.Size(76, 17);
+            this.ManhattanNormRadioButton.TabIndex = 1;
+            this.ManhattanNormRadioButton.Text = "Manhattan";
+            this.ManhattanNormRadioButton.UseVisualStyleBackColor = true;
+            this.ManhattanNormRadioButton.CheckedChanged += new System.EventHandler(this.ManhattanNormRadioButton_CheckedChanged);
+            // 
+            // EuclideanNormRadioButton
+            // 
+            this.EuclideanNormRadioButton.AutoSize = true;
+            this.EuclideanNormRadioButton.Checked = true;
+            this.EuclideanNormRadioButton.Location = new System.Drawing.Point(6, 19);
+            this.EuclideanNormRadioButton.Name = "EuclideanNormRadioButton";
+            this.EuclideanNormRadioButton.Size = new System.Drawing.Size(72, 17);
+            this.EuclideanNormRadioButton.TabIndex = 0;
+            this.EuclideanNormRadioButton.TabStop = true;
+            this.EuclideanNormRadioButton.Text = "Euclidean";
+            this.EuclideanNormRadioButton.UseVisualStyleBackColor = true;
+            this.EuclideanNormRadioButton.CheckedChanged += new System.EventHandler(this.EuclideanNormRadioButton_CheckedChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.KSelectBox);
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(75, 71);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "select k";
+            // 
+            // KSelectBox
+            // 
+            this.KSelectBox.Location = new System.Drawing.Point(6, 29);
+            this.KSelectBox.Name = "KSelectBox";
+            this.KSelectBox.Size = new System.Drawing.Size(47, 20);
+            this.KSelectBox.TabIndex = 0;
+            this.KSelectBox.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.KSelectBox.ValueChanged += new System.EventHandler(this.KSelectBox_ValueChanged);
+            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 2;
@@ -670,6 +758,14 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.javascripttb)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.KSelectBox)).EndInit();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
@@ -682,7 +778,6 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
@@ -722,6 +817,14 @@
         private System.Windows.Forms.Label vueScore;
         private System.Windows.Forms.Label gitScore;
         private System.Windows.Forms.Label javascriptScore;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton infinityNormRadioButton;
+        private System.Windows.Forms.RadioButton ManhattanNormRadioButton;
+        private System.Windows.Forms.RadioButton EuclideanNormRadioButton;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.NumericUpDown KSelectBox;
     }
 }
 
