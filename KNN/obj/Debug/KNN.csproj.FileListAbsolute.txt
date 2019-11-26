@@ -21,3 +21,16 @@ C:\Users\Lazy\Projects\msi\KNN\obj\Debug\KNN.pdb
 C:\Users\Lazy\Projects\msi\KNN\bin\Debug\MathNet.Numerics.dll
 C:\Users\Lazy\Projects\msi\KNN\bin\Debug\MathNet.Numerics.xml
 C:\Users\Lazy\Projects\msi\KNN\obj\Debug\KNN.csproj.CopyComplete
+C:\Users\grzeg\Desktop\msi\KNN\bin\Debug\KNN.exe.config
+C:\Users\grzeg\Desktop\msi\KNN\bin\Debug\KNN.exe
+C:\Users\grzeg\Desktop\msi\KNN\bin\Debug\KNN.pdb
+C:\Users\grzeg\Desktop\msi\KNN\bin\Debug\MathNet.Numerics.dll
+C:\Users\grzeg\Desktop\msi\KNN\bin\Debug\MathNet.Numerics.xml
+C:\Users\grzeg\Desktop\msi\KNN\obj\Debug\KNN.csprojAssemblyReference.cache
+C:\Users\grzeg\Desktop\msi\KNN\obj\Debug\KNN.Form1.resources
+C:\Users\grzeg\Desktop\msi\KNN\obj\Debug\KNN.Properties.Resources.resources
+C:\Users\grzeg\Desktop\msi\KNN\obj\Debug\KNN.csproj.GenerateResource.cache
+C:\Users\grzeg\Desktop\msi\KNN\obj\Debug\KNN.csproj.CoreCompileInputs.cache
+C:\Users\grzeg\Desktop\msi\KNN\obj\Debug\KNN.csproj.CopyComplete
+C:\Users\grzeg\Desktop\msi\KNN\obj\Debug\KNN.exe
+C:\Users\grzeg\Desktop\msi\KNN\obj\Debug\KNN.pdb
