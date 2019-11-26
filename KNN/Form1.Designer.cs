@@ -116,7 +116,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel8, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
@@ -142,7 +142,7 @@
             this.tableLayoutPanel2.Controls.Add(this.splitContainer1, 1, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -162,7 +162,7 @@
             this.tableLayoutPanel13.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(5, 393);
-            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -174,7 +174,7 @@
             this.reduxtb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reduxtb.Location = new System.Drawing.Point(135, 31);
-            this.reduxtb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reduxtb.Margin = new System.Windows.Forms.Padding(4);
             this.reduxtb.Name = "reduxtb";
             this.reduxtb.Size = new System.Drawing.Size(387, 56);
             this.reduxtb.TabIndex = 3;
@@ -202,7 +202,7 @@
             this.tableLayoutPanel12.Controls.Add(this.label10, 0, 0);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel12.Location = new System.Drawing.Point(540, 296);
-            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 1;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -214,7 +214,7 @@
             this.reacttb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reacttb.Location = new System.Drawing.Point(135, 28);
-            this.reacttb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reacttb.Margin = new System.Windows.Forms.Padding(4);
             this.reacttb.Name = "reacttb";
             this.reacttb.Size = new System.Drawing.Size(388, 56);
             this.reacttb.TabIndex = 3;
@@ -242,7 +242,7 @@
             this.tableLayoutPanel11.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(5, 296);
-            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -254,7 +254,7 @@
             this.angulartb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.angulartb.Location = new System.Drawing.Point(135, 28);
-            this.angulartb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.angulartb.Margin = new System.Windows.Forms.Padding(4);
             this.angulartb.Name = "angulartb";
             this.angulartb.Size = new System.Drawing.Size(387, 56);
             this.angulartb.TabIndex = 3;
@@ -282,7 +282,7 @@
             this.tableLayoutPanel9.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(540, 199);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -294,7 +294,7 @@
             this.csstb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.csstb.Location = new System.Drawing.Point(135, 28);
-            this.csstb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.csstb.Margin = new System.Windows.Forms.Padding(4);
             this.csstb.Name = "csstb";
             this.csstb.Size = new System.Drawing.Size(388, 56);
             this.csstb.TabIndex = 3;
@@ -322,7 +322,7 @@
             this.tableLayoutPanel7.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(5, 199);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -334,7 +334,7 @@
             this.htmltb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.htmltb.Location = new System.Drawing.Point(135, 28);
-            this.htmltb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.htmltb.Margin = new System.Windows.Forms.Padding(4);
             this.htmltb.Name = "htmltb";
             this.htmltb.Size = new System.Drawing.Size(387, 56);
             this.htmltb.TabIndex = 3;
@@ -362,7 +362,7 @@
             this.tableLayoutPanel6.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(540, 102);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -374,7 +374,7 @@
             this.typescripttb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.typescripttb.Location = new System.Drawing.Point(135, 28);
-            this.typescripttb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.typescripttb.Margin = new System.Windows.Forms.Padding(4);
             this.typescripttb.Name = "typescripttb";
             this.typescripttb.Size = new System.Drawing.Size(388, 56);
             this.typescripttb.TabIndex = 3;
@@ -402,7 +402,7 @@
             this.tableLayoutPanel5.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(5, 102);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -414,7 +414,7 @@
             this.vuetb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.vuetb.Location = new System.Drawing.Point(135, 28);
-            this.vuetb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vuetb.Margin = new System.Windows.Forms.Padding(4);
             this.vuetb.Name = "vuetb";
             this.vuetb.Size = new System.Drawing.Size(387, 56);
             this.vuetb.TabIndex = 3;
@@ -442,7 +442,7 @@
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(540, 5);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -454,7 +454,7 @@
             this.gittb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gittb.Location = new System.Drawing.Point(135, 28);
-            this.gittb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gittb.Margin = new System.Windows.Forms.Padding(4);
             this.gittb.Name = "gittb";
             this.gittb.Size = new System.Drawing.Size(388, 56);
             this.gittb.TabIndex = 3;
@@ -482,15 +482,15 @@
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 5);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(526, 88);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
@@ -499,7 +499,7 @@
             this.javascripttb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.javascripttb.Location = new System.Drawing.Point(135, 28);
-            this.javascripttb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.javascripttb.Margin = new System.Windows.Forms.Padding(4);
             this.javascripttb.Name = "javascripttb";
             this.javascripttb.Size = new System.Drawing.Size(387, 56);
             this.javascripttb.TabIndex = 0;
@@ -523,7 +523,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(540, 393);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -544,9 +544,9 @@
             this.groupBox1.Controls.Add(this.ManhattanNormRadioButton);
             this.groupBox1.Controls.Add(this.EuclideanNormRadioButton);
             this.groupBox1.Location = new System.Drawing.Point(8, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(405, 91);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
@@ -557,7 +557,7 @@
             this.infinityNormRadioButton.AutoSize = true;
             this.infinityNormRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.infinityNormRadioButton.Location = new System.Drawing.Point(256, 23);
-            this.infinityNormRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.infinityNormRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.infinityNormRadioButton.Name = "infinityNormRadioButton";
             this.infinityNormRadioButton.Size = new System.Drawing.Size(119, 24);
             this.infinityNormRadioButton.TabIndex = 2;
@@ -570,7 +570,7 @@
             this.ManhattanNormRadioButton.AutoSize = true;
             this.ManhattanNormRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ManhattanNormRadioButton.Location = new System.Drawing.Point(135, 23);
-            this.ManhattanNormRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ManhattanNormRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.ManhattanNormRadioButton.Name = "ManhattanNormRadioButton";
             this.ManhattanNormRadioButton.Size = new System.Drawing.Size(108, 24);
             this.ManhattanNormRadioButton.TabIndex = 1;
@@ -584,7 +584,7 @@
             this.EuclideanNormRadioButton.Checked = true;
             this.EuclideanNormRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.EuclideanNormRadioButton.Location = new System.Drawing.Point(8, 23);
-            this.EuclideanNormRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EuclideanNormRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.EuclideanNormRadioButton.Name = "EuclideanNormRadioButton";
             this.EuclideanNormRadioButton.Size = new System.Drawing.Size(103, 24);
             this.EuclideanNormRadioButton.TabIndex = 0;
@@ -597,18 +597,18 @@
             // 
             this.groupBox2.Controls.Add(this.KSelectBox);
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(100, 87);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "select k";
+            this.groupBox2.Text = "K";
             // 
             // KSelectBox
             // 
-            this.KSelectBox.Location = new System.Drawing.Point(8, 36);
-            this.KSelectBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KSelectBox.Location = new System.Drawing.Point(20, 31);
+            this.KSelectBox.Margin = new System.Windows.Forms.Padding(4);
             this.KSelectBox.Name = "KSelectBox";
             this.KSelectBox.Size = new System.Drawing.Size(63, 22);
             this.KSelectBox.TabIndex = 0;
@@ -628,10 +628,11 @@
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel10, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(4, 501);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(1072, 206);
             this.tableLayoutPanel8.TabIndex = 1;
             // 
@@ -665,7 +666,7 @@
             this.tableLayoutPanel10.Controls.Add(this.javascriptScore, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 5;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -799,7 +800,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 711);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Employee value";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -893,12 +894,12 @@
         private System.Windows.Forms.Label javascriptScore;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.NumericUpDown KSelectBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton infinityNormRadioButton;
         private System.Windows.Forms.RadioButton ManhattanNormRadioButton;
         private System.Windows.Forms.RadioButton EuclideanNormRadioButton;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.NumericUpDown KSelectBox;
     }
 }
 
