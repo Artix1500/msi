@@ -173,6 +173,7 @@
             // 
             this.reduxtb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.reduxtb.LargeChange = 1;
             this.reduxtb.Location = new System.Drawing.Point(135, 31);
             this.reduxtb.Margin = new System.Windows.Forms.Padding(4);
             this.reduxtb.Name = "reduxtb";
@@ -213,6 +214,7 @@
             // 
             this.reacttb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.reacttb.LargeChange = 1;
             this.reacttb.Location = new System.Drawing.Point(135, 28);
             this.reacttb.Margin = new System.Windows.Forms.Padding(4);
             this.reacttb.Name = "reacttb";
@@ -253,6 +255,7 @@
             // 
             this.angulartb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.angulartb.LargeChange = 1;
             this.angulartb.Location = new System.Drawing.Point(135, 28);
             this.angulartb.Margin = new System.Windows.Forms.Padding(4);
             this.angulartb.Name = "angulartb";
@@ -293,6 +296,7 @@
             // 
             this.csstb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.csstb.LargeChange = 1;
             this.csstb.Location = new System.Drawing.Point(135, 28);
             this.csstb.Margin = new System.Windows.Forms.Padding(4);
             this.csstb.Name = "csstb";
@@ -333,6 +337,7 @@
             // 
             this.htmltb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.htmltb.LargeChange = 1;
             this.htmltb.Location = new System.Drawing.Point(135, 28);
             this.htmltb.Margin = new System.Windows.Forms.Padding(4);
             this.htmltb.Name = "htmltb";
@@ -373,6 +378,7 @@
             // 
             this.typescripttb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.typescripttb.LargeChange = 1;
             this.typescripttb.Location = new System.Drawing.Point(135, 28);
             this.typescripttb.Margin = new System.Windows.Forms.Padding(4);
             this.typescripttb.Name = "typescripttb";
@@ -413,6 +419,7 @@
             // 
             this.vuetb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.vuetb.LargeChange = 1;
             this.vuetb.Location = new System.Drawing.Point(135, 28);
             this.vuetb.Margin = new System.Windows.Forms.Padding(4);
             this.vuetb.Name = "vuetb";
@@ -453,6 +460,7 @@
             // 
             this.gittb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gittb.LargeChange = 1;
             this.gittb.Location = new System.Drawing.Point(135, 28);
             this.gittb.Margin = new System.Windows.Forms.Padding(4);
             this.gittb.Name = "gittb";
@@ -498,6 +506,7 @@
             // 
             this.javascripttb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.javascripttb.LargeChange = 1;
             this.javascripttb.Location = new System.Drawing.Point(135, 28);
             this.javascripttb.Margin = new System.Windows.Forms.Padding(4);
             this.javascripttb.Name = "javascripttb";
