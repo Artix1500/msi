@@ -57,15 +57,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.javascripttb = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.infinityNormRadioButton = new System.Windows.Forms.RadioButton();
-            this.ManhattanNormRadioButton = new System.Windows.Forms.RadioButton();
-            this.EuclideanNormRadioButton = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.KSelectBox = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.ResultLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.reduxScore = new System.Windows.Forms.Label();
             this.reactScore = new System.Windows.Forms.Label();
@@ -77,6 +69,14 @@
             this.gitScore = new System.Windows.Forms.Label();
             this.javascriptScore = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.KSelectBox = new System.Windows.Forms.NumericUpDown();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.EuclideanNormRadioButton = new System.Windows.Forms.RadioButton();
+            this.ManhattanNormRadioButton = new System.Windows.Forms.RadioButton();
+            this.infinityNormRadioButton = new System.Windows.Forms.RadioButton();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.ResultLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
@@ -97,15 +97,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.gittb)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.javascripttb)).BeginInit();
+            this.tableLayoutPanel8.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.KSelectBox)).BeginInit();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.KSelectBox)).BeginInit();
-            this.tableLayoutPanel8.SuspendLayout();
-            this.tableLayoutPanel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -519,106 +519,6 @@
             this.label1.Text = "JavaScript";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(540, 393);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(527, 91);
-            this.splitContainer1.SplitterDistance = 421;
-            this.splitContainer1.SplitterWidth = 5;
-            this.splitContainer1.TabIndex = 9;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.infinityNormRadioButton);
-            this.groupBox1.Controls.Add(this.ManhattanNormRadioButton);
-            this.groupBox1.Controls.Add(this.EuclideanNormRadioButton);
-            this.groupBox1.Location = new System.Drawing.Point(8, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(405, 91);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Metric";
-            // 
-            // infinityNormRadioButton
-            // 
-            this.infinityNormRadioButton.AutoSize = true;
-            this.infinityNormRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.infinityNormRadioButton.Location = new System.Drawing.Point(256, 23);
-            this.infinityNormRadioButton.Margin = new System.Windows.Forms.Padding(4);
-            this.infinityNormRadioButton.Name = "infinityNormRadioButton";
-            this.infinityNormRadioButton.Size = new System.Drawing.Size(119, 24);
-            this.infinityNormRadioButton.TabIndex = 2;
-            this.infinityNormRadioButton.Text = "InfinityNorm";
-            this.infinityNormRadioButton.UseVisualStyleBackColor = true;
-            this.infinityNormRadioButton.CheckedChanged += new System.EventHandler(this.infinityNormRadioButton_CheckedChanged);
-            // 
-            // ManhattanNormRadioButton
-            // 
-            this.ManhattanNormRadioButton.AutoSize = true;
-            this.ManhattanNormRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ManhattanNormRadioButton.Location = new System.Drawing.Point(135, 23);
-            this.ManhattanNormRadioButton.Margin = new System.Windows.Forms.Padding(4);
-            this.ManhattanNormRadioButton.Name = "ManhattanNormRadioButton";
-            this.ManhattanNormRadioButton.Size = new System.Drawing.Size(108, 24);
-            this.ManhattanNormRadioButton.TabIndex = 1;
-            this.ManhattanNormRadioButton.Text = "Manhattan";
-            this.ManhattanNormRadioButton.UseVisualStyleBackColor = true;
-            this.ManhattanNormRadioButton.CheckedChanged += new System.EventHandler(this.ManhattanNormRadioButton_CheckedChanged);
-            // 
-            // EuclideanNormRadioButton
-            // 
-            this.EuclideanNormRadioButton.AutoSize = true;
-            this.EuclideanNormRadioButton.Checked = true;
-            this.EuclideanNormRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.EuclideanNormRadioButton.Location = new System.Drawing.Point(8, 23);
-            this.EuclideanNormRadioButton.Margin = new System.Windows.Forms.Padding(4);
-            this.EuclideanNormRadioButton.Name = "EuclideanNormRadioButton";
-            this.EuclideanNormRadioButton.Size = new System.Drawing.Size(103, 24);
-            this.EuclideanNormRadioButton.TabIndex = 0;
-            this.EuclideanNormRadioButton.TabStop = true;
-            this.EuclideanNormRadioButton.Text = "Euclidean";
-            this.EuclideanNormRadioButton.UseVisualStyleBackColor = true;
-            this.EuclideanNormRadioButton.CheckedChanged += new System.EventHandler(this.EuclideanNormRadioButton_CheckedChanged);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.KSelectBox);
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(100, 87);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "K";
-            // 
-            // KSelectBox
-            // 
-            this.KSelectBox.Location = new System.Drawing.Point(20, 31);
-            this.KSelectBox.Margin = new System.Windows.Forms.Padding(4);
-            this.KSelectBox.Name = "KSelectBox";
-            this.KSelectBox.Size = new System.Drawing.Size(63, 22);
-            this.KSelectBox.TabIndex = 0;
-            this.KSelectBox.Value = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
-            this.KSelectBox.ValueChanged += new System.EventHandler(this.KSelectBox_ValueChanged);
-            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 2;
@@ -632,22 +532,9 @@
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 206F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(1072, 206);
             this.tableLayoutPanel8.TabIndex = 1;
-            // 
-            // ResultLabel
-            // 
-            this.ResultLabel.AutoSize = true;
-            this.ResultLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ResultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ResultLabel.Location = new System.Drawing.Point(540, 0);
-            this.ResultLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.ResultLabel.Name = "ResultLabel";
-            this.ResultLabel.Size = new System.Drawing.Size(528, 206);
-            this.ResultLabel.TabIndex = 1;
-            this.ResultLabel.Text = "Wynik";
-            this.ResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel10
             // 
@@ -794,6 +681,119 @@
             this.javascriptScore.Text = "label2";
             this.javascriptScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.KSelectBox);
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(100, 87);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "K";
+            // 
+            // KSelectBox
+            // 
+            this.KSelectBox.Location = new System.Drawing.Point(20, 31);
+            this.KSelectBox.Margin = new System.Windows.Forms.Padding(4);
+            this.KSelectBox.Name = "KSelectBox";
+            this.KSelectBox.Size = new System.Drawing.Size(63, 22);
+            this.KSelectBox.TabIndex = 0;
+            this.KSelectBox.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.KSelectBox.ValueChanged += new System.EventHandler(this.KSelectBox_ValueChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.infinityNormRadioButton);
+            this.groupBox1.Controls.Add(this.ManhattanNormRadioButton);
+            this.groupBox1.Controls.Add(this.EuclideanNormRadioButton);
+            this.groupBox1.Location = new System.Drawing.Point(8, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(405, 91);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Metric";
+            // 
+            // EuclideanNormRadioButton
+            // 
+            this.EuclideanNormRadioButton.AutoSize = true;
+            this.EuclideanNormRadioButton.Checked = true;
+            this.EuclideanNormRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.EuclideanNormRadioButton.Location = new System.Drawing.Point(8, 23);
+            this.EuclideanNormRadioButton.Margin = new System.Windows.Forms.Padding(4);
+            this.EuclideanNormRadioButton.Name = "EuclideanNormRadioButton";
+            this.EuclideanNormRadioButton.Size = new System.Drawing.Size(103, 24);
+            this.EuclideanNormRadioButton.TabIndex = 0;
+            this.EuclideanNormRadioButton.TabStop = true;
+            this.EuclideanNormRadioButton.Text = "Euclidean";
+            this.EuclideanNormRadioButton.UseVisualStyleBackColor = true;
+            this.EuclideanNormRadioButton.CheckedChanged += new System.EventHandler(this.EuclideanNormRadioButton_CheckedChanged);
+            // 
+            // ManhattanNormRadioButton
+            // 
+            this.ManhattanNormRadioButton.AutoSize = true;
+            this.ManhattanNormRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ManhattanNormRadioButton.Location = new System.Drawing.Point(135, 23);
+            this.ManhattanNormRadioButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ManhattanNormRadioButton.Name = "ManhattanNormRadioButton";
+            this.ManhattanNormRadioButton.Size = new System.Drawing.Size(108, 24);
+            this.ManhattanNormRadioButton.TabIndex = 1;
+            this.ManhattanNormRadioButton.Text = "Manhattan";
+            this.ManhattanNormRadioButton.UseVisualStyleBackColor = true;
+            this.ManhattanNormRadioButton.CheckedChanged += new System.EventHandler(this.ManhattanNormRadioButton_CheckedChanged);
+            // 
+            // infinityNormRadioButton
+            // 
+            this.infinityNormRadioButton.AutoSize = true;
+            this.infinityNormRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.infinityNormRadioButton.Location = new System.Drawing.Point(256, 23);
+            this.infinityNormRadioButton.Margin = new System.Windows.Forms.Padding(4);
+            this.infinityNormRadioButton.Name = "infinityNormRadioButton";
+            this.infinityNormRadioButton.Size = new System.Drawing.Size(119, 24);
+            this.infinityNormRadioButton.TabIndex = 2;
+            this.infinityNormRadioButton.Text = "InfinityNorm";
+            this.infinityNormRadioButton.UseVisualStyleBackColor = true;
+            this.infinityNormRadioButton.CheckedChanged += new System.EventHandler(this.infinityNormRadioButton_CheckedChanged);
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(540, 393);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer1.Size = new System.Drawing.Size(527, 91);
+            this.splitContainer1.SplitterDistance = 311;
+            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.TabIndex = 9;
+            // 
+            // ResultLabel
+            // 
+            this.ResultLabel.AutoSize = true;
+            this.ResultLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ResultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ResultLabel.Location = new System.Drawing.Point(540, 0);
+            this.ResultLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ResultLabel.Name = "ResultLabel";
+            this.ResultLabel.Size = new System.Drawing.Size(528, 206);
+            this.ResultLabel.TabIndex = 1;
+            this.ResultLabel.Text = "Wynik";
+            this.ResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -833,18 +833,18 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.javascripttb)).EndInit();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.KSelectBox)).EndInit();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.KSelectBox)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -881,7 +881,6 @@
         private System.Windows.Forms.TrackBar gittb;
         private System.Windows.Forms.TrackBar javascripttb;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Label ResultLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.Label reduxScore;
         private System.Windows.Forms.Label reactScore;
@@ -894,12 +893,13 @@
         private System.Windows.Forms.Label javascriptScore;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.NumericUpDown KSelectBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton infinityNormRadioButton;
         private System.Windows.Forms.RadioButton ManhattanNormRadioButton;
         private System.Windows.Forms.RadioButton EuclideanNormRadioButton;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.NumericUpDown KSelectBox;
+        private System.Windows.Forms.Label ResultLabel;
     }
 }
 
