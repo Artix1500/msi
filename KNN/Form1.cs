@@ -153,7 +153,7 @@ namespace KNN
                 ResultLabel.Text = $@"Closest classes: {string.Join(" ", topClasses)} {Environment.NewLine}"+
                                    $@"Assigned class: {topClass} --> {GetSalaryForClass(topClass)}";
 
-                this.Text = $@"Employee value -> Precision: {GetPrecisionOnTrainingSet()}";
+                //this.Text = $@"Employee value -> Precision: {GetPrecisionOnTrainingSet()}";
             }
 
             return topClass;
